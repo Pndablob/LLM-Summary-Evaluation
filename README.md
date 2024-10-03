@@ -8,7 +8,7 @@
 
 ## Project 
 
-In this project, you will team up with 2 other Artificial Intelligence students to form a group that will explore the limits of LLM (. You will be provided with a OpenAI endpoint which you will access via REST requests. You and your colleagues will collaborate in the same GIT repository, be sure to commit often so course staff can monitor your progress. Git commits will also be used as proof of collaboration, this is a group project so one student doing all the work is not allowed and you will be penalized if that is the case. 
+In this project, you will team up with 2 other Artificial Intelligence students to form a group that will explore the limits of LLMs (specifically gpt4o-mini). You will be provided with a OpenAI endpoint which you will access via REST requests. You and your colleagues will collaborate in the same GIT repository, be sure to commit often so course staff can monitor your progress. Git commits will also be used as proof of collaboration, this is a group project so one student doing all the work is not allowed and you will be penalized if that is the case. 
 
 Once you have a team, you will brainstorm on an idea that involves generating structured or unstructured text using an LLM. Try out your idea on 383GPT to get a sense of what is possible. Include your findings in your project proposal where you indicate the models capabilties on a single prompt. You are free to choose the discipline, it can be science, poetry, literature, language etc. Write a draft of the idea, providing details on the problem, the dataset that you will use and how you will evaluate the performance of the LLM. Submit a draft on gradescope, a course staff will be assigned to mentor you during the 8 weeks of the project.
 
