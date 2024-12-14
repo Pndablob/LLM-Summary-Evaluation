@@ -24,7 +24,7 @@ def extract_document_contents(file_path: str) -> str:
         return text
 
 
-def summarize_document(document: str, prompt: str = "summarize this syllabus", model: str = "gpt-4o-mini", max_tokens: int = 500):
+def summarize_document(document: str, prompt: str, model: str = "gpt-4o-mini", max_tokens: int = 1024):
     client = openai_connect()
 
     try:
@@ -32,7 +32,8 @@ def summarize_document(document: str, prompt: str = "summarize this syllabus", m
             messages=[
                 {
                     "role": "system",
-                    "content": f"You are an assistant to summarize documents",
+                    "content": f"You are an assistant to summarize a syllabus. Produce an output of the given length in the format:\n"
+                               f"Summary of <course prefix> - <course title>: "
                 },
                 {
                     "role": "user",
@@ -52,15 +53,15 @@ if __name__ == '__main__':
     pass
     # implement storing llm outputs in a json/dictionary
 
-    # # has tables
-    # print("Summarizing documents with tables")
-    # has_tables = 'syllabi/has_tables'
-    # for file in os.listdir(has_tables):
-    #     file_path = os.path.join(has_tables, file)
-    #     document = extract_document_contents(file_path)
-    #     summary = summarize_document(document)
-    #     print(f"Summary of {file}:\n{summary}")
-    #
+    # has tables
+    print("Summarizing documents with tables")
+    has_tables = 'syllabi/has_tables'
+    for file in os.listdir(has_tables):
+        file_path = os.path.join(has_tables, file)
+        document = extract_document_contents(file_path)
+        summary = summarize_document(document)
+        print(summary)
+
     # # no tables
     # print("\nSummarizing documents without tables")
     # no_tables = 'syllabi/no_tables'
@@ -68,5 +69,5 @@ if __name__ == '__main__':
     #     file_path = os.path.join(no_tables, file)
     #     document = extract_document_contents(file_path)
     #     summary = summarize_document(document)
-    #     print(f"Summary of {file}:\n{summary}")
+    #     print(summary)
     #     print()
